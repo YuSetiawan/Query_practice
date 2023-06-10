@@ -100,4 +100,5 @@ VALUES (1, 1, 2, '2023-06-11 10:52:59'),
 (4, 2, 3, '2023-06-12 14:02:33'),
 (5, 2, 4, '2023-06-12 14:02:33');
 
-
+-- Menampilkan table many to many
+SELECT order.*, user.name AS buyer_name, user.contact, user.addres, product.product_name, product.price, FROM order INNER JOIN user ON order.id_user = user.id_user INNER JOIN product ON order.id_product = product.id_product;
